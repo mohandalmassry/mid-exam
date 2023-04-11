@@ -15,7 +15,7 @@ class Controller extends BaseController
     public function getAllExponses()
     {
         $exponses = Exam::all();
-        return view('expenses', compact('exponses'));
+        return view('create_expenses', compact('exponses'));
     }
 
 
@@ -27,7 +27,7 @@ class Controller extends BaseController
         $exam->currency = $request->currency;
         $exam->ExpenseDate = $request->ExpenseDate;
         $exam->save();
-        return redirect() -> back();
+        return view('expenses', compact('exponses'));
     }
 
     public function delete($id){

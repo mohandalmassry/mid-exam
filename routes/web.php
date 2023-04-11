@@ -15,9 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', [ExamController::class,'getAllExponses']);
+Route::get('/create', [ExamController::class,'getAllExponses']);
 
-Route::post('/store',  [ExamController::class, 'insert']);
+Route::post('/expenses',  [ExamController::class, 'insert']);
+Route::get('/expenses',  [ExamController::class, 'insert']);
 
 Route::delete('delete/{id}', [ExamController::class, 'delete']);
 Route::post('update/{id}',[ExamController::class, 'update']);
